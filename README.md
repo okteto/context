@@ -25,7 +25,7 @@ Your Okteto Enterprise URL. Use this to run your actions in your Okteto Enterpri
 
 ## Example usage
 
-This example runs the login action and then activates a namespace.
+This example runs the context action and then activates a namespace.
 
 ```yaml
 # File: .github/workflows/workflow.yml
@@ -43,9 +43,10 @@ jobs:
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
-    - uses: okteto/namespace@latest
+    - name: "Build"
+      uses: okteto/build@latest
       with:
-        name: cindylopez
+        tag: okteto.dev/hello-world:${{ github.sha }}
 ```
 
 ## Advanced usage
@@ -74,7 +75,8 @@ jobs:
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
-    - uses: okteto/namespace@latest
+    - name: "Build"
+      uses: okteto/build@latest
       with:
-        name: cindylopez
+        tag: okteto.dev/hello-world:${{ github.sha }}
 ```
