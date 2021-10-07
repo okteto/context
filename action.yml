@@ -7,12 +7,16 @@ inputs:
   url: 
     description: "Okteto Enterprise URL. Use this to run your actions in your Okteto Enterprise instance (https://okteto.com/enterprise)."
     required: false
+  namespace: 
+    description: "If present, the namespace you want to point to. If not specified, it will use the default namespace."
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.token }}
     - ${{ inputs.url }}
+    - ${{ inputs.namespace }}
 branding:
   color: 'green'
   icon: 'at-sign'
