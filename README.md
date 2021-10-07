@@ -42,6 +42,7 @@ jobs:
     - uses: okteto/context@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
+        namespace: hello-world-cindylopez
     
     - name: "Build"
       uses: okteto/build@latest
@@ -74,6 +75,7 @@ jobs:
     - uses: okteto/context@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
+        namespace: hello-world-cindylopez
     
     - name: "Build"
       uses: okteto/build@latest
