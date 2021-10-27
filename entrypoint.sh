@@ -16,5 +16,5 @@ if [ -z $token ]; then
   exit 1
 fi
 
-echo running: okteto context --token=$token --namespace=$namespace $url
-okteto context --token=$token --namespace=$namespace $url 
+echo running: okteto context use --token=$token --namespace=$namespace $url
+okteto context use --token=$token --namespace=$namespace $url 
