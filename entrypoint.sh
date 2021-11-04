@@ -21,5 +21,5 @@ if [ ! -z $namespace ]; then
   args="--namespace=$namespace"
 fi
 
-echo running: okteto context use --token=$token $args $url
-okteto context use --token=$token $args $url 
+echo running: okteto context create --token=$token $args $url
+okteto context create --token=$token $args $url 
