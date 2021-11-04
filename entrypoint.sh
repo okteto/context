@@ -4,6 +4,7 @@ set -e
 token=$1
 url=$2
 namespace=$3
+args=""
 
 if [ ! -z "$OKTETO_CA_CERT" ]; then
   echo "Custom certificate is provided"
@@ -16,5 +17,9 @@ if [ -z $token ]; then
   exit 1
 fi
 
-echo running: okteto context use --token=$token --namespace=$namespace $url
-okteto context use --token=$token --namespace=$namespace $url 
+if [ ! -z $namespace ]; then
+  args="--namespace=$namespace"
+fi
+
+echo running: okteto context use --token=$token $args $url
+okteto context use --token=$token $args $url 
