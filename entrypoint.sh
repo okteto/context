@@ -23,3 +23,6 @@ fi
 
 echo running: okteto context use --token=$token $args $url
 okteto context use --token=$token $args $url 
+
+echo running: okteto kubeconfig
+eval okteto kubeconfig
