@@ -23,6 +23,11 @@ Copy [your Okteto API token](https://www.okteto.com/docs/cloud/personal-access-t
 
 **Required** Your Okteto instance URL.
 
+### `log-level`
+
+Log level used. Supported values are: `debug`, `info`, `warn`, `error`. (defaults to warn)
+
+
 ## Example usage
 
 This example runs the context action and then activates a namespace.
