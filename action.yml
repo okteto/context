@@ -10,6 +10,9 @@ inputs:
   namespace: 
     description: "If present, the namespace you want to point to. If not specified, it will use the default namespace."
     required: false
+  log-level:
+    description: "Log level string. Valid options are debug, info, warn, error"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -17,6 +20,7 @@ runs:
     - ${{ inputs.token }}
     - ${{ inputs.url }}
     - ${{ inputs.namespace }}
+    - ${{ inputs.log-level }}
 branding:
   color: 'green'
   icon: 'at-sign'
