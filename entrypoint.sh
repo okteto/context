@@ -37,4 +37,4 @@ echo running: okteto context use --token=$token $args $url $log_level
 okteto context use --token=$token $args $url $log_level
 
 echo running: okteto kubeconfig
-eval okteto kubeconfig
+okteto kubeconfig
