@@ -5,8 +5,8 @@ inputs:
     description: "Your okteto API token"
     required: true
   url: 
-    description: "Okteto Enterprise URL. Use this to run your actions in your Okteto Enterprise instance (https://okteto.com/enterprise)."
-    required: false
+    description: "The URL of your Okteto instance (e.g. https://okteto.example.com)"
+    required: true
   namespace: 
     description: "If present, the namespace you want to point to. If not specified, it will use the default namespace."
     required: false
